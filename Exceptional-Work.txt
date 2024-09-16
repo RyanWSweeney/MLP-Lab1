@@ -2,3 +2,7 @@
 
 [0.6 Points] Additional analysis:
 5000 level students: You have free rein to provide any additional analyses. 
+
+Interesting Question 4: Is there a correlation between unemployment rates and academic performance across different semesters? 
+
+According to the heatmap, as shown previously, the answer is no. There is very little correlation between unemployment rates and first and second-semester grades. This could suggest that external economic factors, such as unemployment rates, may not have a significant impact on students' academic performance, at least in terms of grades. This could be a useful insight for educators and policymakers, as it could imply that academic performance is more closely tied to individual student factors rather than broader economic ones.
