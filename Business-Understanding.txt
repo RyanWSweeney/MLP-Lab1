@@ -1,54 +1,40 @@
-
-
-
+Business Understanding:
 The dataset selected for this analysis is from the Polytechnic Institute of Portalegre and focuses on predicting student academic performance and dropout rates in higher education. It includes data for 4,424 students enrolled in various undergraduate programs. We have selected 17 out of 35 attributes that provide a comprehensive view of each student’s demographic background, socioeconomic status, and academic performance at different stages of their education.
 
-The primary objective of this dataset is to understand the factors that influence student success in higher education institutions. 
-This dataset combines data from multiple sources which include Academic Management System (AMS), the Support system for the Teaching Activity (PAE), 
-the General Directorate of Higher Education (DGES), and macroeconomic data from PORDATA. 
+The primary objective of this dataset is to understand the factors that influence student success in higher education institutions. By identifying the most significant predictors of academic outcomes, we aim to develop a predictive model that can accurately classify students into one of the following outcomes: “Graduate”, “Enrolled”, or “Dropout”.
 
-This data was collected to support the development of a Learning Analytics tool designed to predict academic performance and dropout risks. 
-The tool assists the tutors at the Polytechnic Institute of Portalegre by providing early warnings about students who may be at risk of 
-underperforming or dropping out. By identifying these students early, the institution can implement targeted interventions to support them, 
-such as personalized tutoring, counseling, or financial assistance.
+This dataset combines data from multiple sources which include the Academic Management System (AMS), the Support System for the Teaching Activity (PAE), the General Directorate of Higher Education (DGES), and macroeconomic data from PORDATA. 
 
-The core prediction task involves a multi-classification model that can accurately categorize students into one of the following outcomes 
-by the end of the semester: graduated, enrolled, or dropout. 
+This data was collected to support the development of a Learning Analytics tool designed to predict academic performance and dropout risks. The tool assists the tutors at the Polytechnic Institute of Portalegre by providing early warnings about students who may be at risk of underperforming or dropping out. By identifying these students early, the institution can implement targeted interventions to support them, such as personalized tutoring, counseling, or financial assistance.
 
-The information is valuable to many people. It’s useful to educational institutions because they can leverage these predictions to improve 
-student retention rates, improve academic support services, and optimize resource allocation. The insights from the data will also benefit 
-students and families helping them make informed decisions regarding course selection, financial planning, and seeking support services. We will need 
-at least a 70% accuracy… lots of features….
+The information is valuable to many people. It’s useful to educational institutions because they can leverage these predictions to improve student retention rates, improve academic support services, and optimize resource allocation. The insights from the data will also benefit students and families helping them make informed decisions regarding course selection, financial planning, and seeking support services. 
+
+To ensure the model’s reliability, we aim for a minimum accuracy of 70%. This threshold is based on balancing the need for accurate predictions with the complexity of educational data and the acceptable rate of false positives and negatives in an academic setting. Achieving at least 70% accuracy ensures that a significant majority of at-risk students are correctly identified.
 
 What’s the point?
-Student dropout and prolonged enrollment are significant challenges in higher education. High dropout rates can negatively impact an 
-institution’s reputation, funding, and overall effectiveness. For students, dropping out often leads to personal and financial setbacks, 
-including student loan debt without the benefit of a degree. By accurately predicting which students are at risk, institutions can improve 
-retention rates, optimize resource allocation, and enhance student experience.
+Student dropout and prolonged enrollment are significant challenges in higher education. High dropout rates can negatively impact an institution’s reputation, funding, and overall effectiveness. For students, dropping out often leads to personal and financial setbacks, including student loan debt without the benefit of a degree. By accurately predicting which students are at risk, institutions can improve retention rates, optimize resource allocation, and enhance student experience.
 
-Developing a predictive model that accurately identifies at-risk students can provide immense value to educational institutions and stakeholders. 
-By leveraging insights from the selected attributes, universities can implement targeted interventions to improve student retention and success rates. 
-The ultimate goal is to support students in achieving their academic objectives while optimizing institutional resources and fostering a culture of 
-success within the educational community. 
-
-Features
-Application Order: reflects student’s course preference, influencing motivation and commitment
-Course: captures program-specific factors affecting success
-Daytime/Evening Attendance
-Displaced: living away from home?
-Debtor
-Tuition Fees Up to Date
-Gender
-Scholarship Holder: indicates financial support and possible increase of motivation
-International
-Curricular Units 1st Semester (Credited): credits received
-Curricular Units 1st Semester (Enrolled): hours enrolled
-Curricular Units 1st Semester (Grade): grade
-Curricular Units 2nd Semester (Credited)
-Curricular Units 2nd Semester (Enrolled)
-Curricular Units 2nd Semester (Grade)
-Unemployment Rate
-Target (graduated, enrolled, dropped out)
+Developing a predictive model that accurately identifies at-risk students can provide immense value to educational institutions and stakeholders. By leveraging insights from the selected attributes, universities can implement targeted interventions to improve student retention and success rates. The ultimate goal is to support students in achieving their academic objectives while optimizing institutional resources and fostering a culture of success within the educational community. 
 
 
-Which features have the highest correlation with graduation rates? What are changes the student can make to ensure passing the class?
+Data Understanding:
+Features:
+Application Order(int): Reflects student’s course preference, influencing motivation and commitment
+Course(categorical): captures program-specific factors affecting success
+Daytime/Evening Attendance(categorical): Time of day for class
+Displaced(categorical): living away from home?
+Debtor(categorical): Indicates if student is in debt
+Tuition Fees Up to Date(categorical): Indicates if student has paid full tuition
+Gender(categorical): Male/Female
+Scholarship Holder(categorical): indicates financial support and possible increase of motivation
+International(categorical): International student
+Curricular Units 1st Semester (Credited)(int): credits received
+Curricular Units 1st Semester (Enrolled) (int): hours enrolled
+Curricular Units 1st Semester (Grade)(float): grade received
+Curricular Units 2nd Semester (Credited)(int): credits received
+Curricular Units 2nd Semester (Enrolled)(int): hours enrolled
+Curricular Units 2nd Semester (Grade)(float): grade received
+Unemployment Rate(float)
+Target(categorical): graduated, enrolled, dropped out
+
+Application order can reflect the student’s preference for the course they applied to. A higher preference may indicate greater motivation. Course was selected to identify what the student is studying. Different courses have different levels of difficulty. Daytime/Evening attendance can potentially indicate if the student is working. Displaced shows whether a student is living away from home. They often face issues different from those of students who go to the school where they are from. Tuition fees up to date reflect the student’s financial status. Unemployment rate was selected to get a sense of the economy.
